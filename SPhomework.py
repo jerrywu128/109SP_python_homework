@@ -6,15 +6,11 @@ import sys
 def continuous(m):
     
     l = list(m)
-    
-    if 0:
-     return Ture
-    elif 1:
-     return False
-    elif 0:
-     return 2
-    elif 0:
-     return 3
+
+    for i in range(0,len(l)-1):
+        if ord(l[i+1]) - ord(l[i]) == 1:
+            return 1
+    return 0
 
 if __name__ == '__main__':
      if len(sys.argv) < 2:
@@ -52,8 +48,4 @@ if __name__ == '__main__':
    
                  print("長度大於16") 
             if(check==1):
-                 print("英文字母連續")
-            if(check==2):
-                 print("數字連續")
-            if(check==3):
-                 print("英文字母、數字皆連續")     
+                 print("英文字母、數字不可連續")     

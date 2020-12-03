@@ -2,13 +2,13 @@ import re
 import sys
 
 
-
 def continuous(m):
     
-    l = list(m)
+    g = m.lower()
+    l = list(g)
 
     for i in range(0,len(l)-1):
-        if (ord(l[i+1]) - ord(l[i]) == 1)and((48 <= ord(l[i]) <= 57)or(65 <= ord(l[i]) <= 90)or(97 <= ord(l[i]) <= 122)):
+        if (ord(l[i+1]) - ord(l[i]) == 1)and((48 <= ord(l[i]) <= 57)or(97 <= ord(l[i]) <= 122)):
             return 1
     return 0
 
